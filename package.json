@@ -1,6 +1,6 @@
 {
-  "name": "@flightdeck/adsemble",
-  "version": "3.0.0",
+  "name": "@anthonysapp/adsemble",
+  "version": "3.0.1",
   "description": "adSemble - a banner production utility using Parcel",
   "main": "index.js",
   "scripts": {
