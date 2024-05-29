@@ -1,0 +1,33 @@
+<html lang="{{lang}}">
+
+<head>
+    <link rel="stylesheet" href="banner.scss">
+    <meta name="ad.size" content="width={{width}},height={{height}}">
+    {{#if vendor}}
+    {{> (lookup . 'vendor') }}
+    {{else}}
+    {{> vendor/tweenmax }}
+    {{/if}}
+    {{#if clicktag}}
+    {{> (lookup . 'clicktag') }}
+    {{else}}
+    {{> clicktag/generic }}
+    {{/if}}
+</head>
+
+<body style="position:relative; display:block; overflow:hidden; margin:0; padding:0">
+    {{#if customLayout}}
+    <div id="ad" style="position:relative; display:block; overflow:hidden; width:{{width}}px;height:{{height}}px;">
+        {{> @partial-block }}
+    </div>
+    {{else}}
+    <a id="ad" style="position:relative; display:block; overflow:hidden; width:{{width}}px;height:{{height}}px;"
+        href="javascript:exit()">
+        {{> @partial-block }}
+    </a>
+    {{/if}}
+    <figure id="banner-frame"></figure>
+    <script src="banner.js"></script>
+</body>
+
+</html>

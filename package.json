@@ -1,0 +1,55 @@
+{
+  "name": "@flightdeck/banners",
+  "version": "3.0.0",
+  "description": "Banner production utility",
+  "main": "index.js",
+  "scripts": {
+    "parcel:help": "parcel help build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "dev": "./cli-dev.js",
+    "build": "./cli-build.js",
+    "cleanup": "./cli-cleanup.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anthonysapp/banner-production.git"
+  },
+  "keywords": [
+    "banners"
+  ],
+  "author": "Anthony Sapp <anthony@anthonysapp.dev>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anthonysapp/banner-production/issues"
+  },
+  "homepage": "https://github.com/anthonysapp/banner-production#readme",
+  "dependencies": {
+    "bluebird": "^3.7.1",
+    "camelcase": "^5.3.1",
+    "chalk": "^2.4.2",
+    "front-matter": "^3.1.0",
+    "fs-extra": "^8.1.0",
+    "glob": "^7.1.4",
+    "glob-watcher": "^5.0.3",
+    "gray-matter": "^4.0.2",
+    "handlebars-helpers": "^0.10.0",
+    "handlebars-layouts": "^3.1.4",
+    "handlebars-wax": "^6.1.0",
+    "http-server": "^0.12.1",
+    "jpeg-js": "^0.3.7",
+    "node-cmd": "^3.0.0",
+    "opn": "^6.0.0",
+    "parcel-bundler": "^1.12.3",
+    "puppeteer": "^1.20.0",
+    "sass": "^1.23.1",
+    "spritesmith": "^3.4.0",
+    "yargs": "^15.4.1",
+    "yazl": "^2.5.1"
+  },
+  "browserslist": [
+    "last 2 Chrome versions",
+    "ie 11"
+  ]
+}
