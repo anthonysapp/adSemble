@@ -1,16 +1,16 @@
 {
-  "name": "@flightdeck/banners",
+  "name": "@flightdeck/adsemble",
   "version": "3.0.0",
-  "description": "Banner production utility",
+  "description": "adSemble - a banner production utility using Parcel",
   "main": "index.js",
   "scripts": {
     "parcel:help": "parcel help build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "dev": "./cli-dev.js",
-    "build": "./cli-build.js",
-    "cleanup": "./cli-cleanup.js"
+    "adsemble-dev": "./cli-dev.js",
+    "adsemble-build": "./cli-build.js",
+    "adsemble-cleanup": "./cli-cleanup.js"
   },
   "repository": {
     "type": "git",
