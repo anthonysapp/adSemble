@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anthonysapp/banner-production.git"
+    "url": "git+https://github.com/anthonysapp/adSemble.git"
   },
   "keywords": [
     "banners"
@@ -22,9 +22,9 @@
   "author": "Anthony Sapp <anthony@anthonysapp.dev>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/anthonysapp/banner-production/issues"
+    "url": "https://github.com/anthonysapp/adSemble/issues"
   },
-  "homepage": "https://github.com/anthonysapp/banner-production#readme",
+  "homepage": "https://github.com/anthonysapp/adSemble#readme",
   "dependencies": {
     "bluebird": "^3.7.1",
     "camelcase": "^5.3.1",
