@@ -11,7 +11,7 @@ const cmd = require("node-cmd");
 const opn = require("opn");
 const Promise = require("bluebird").Promise;
 const glob = require("glob");
-const fs = require('fs-extra')
+const fs = require("fs-extra");
 
 const generateFrontMatter = require("./generateFrontMatter");
 const generateIndex = require("./generateIndex");
@@ -44,14 +44,14 @@ async function delay(ms) {
   });
 }
 
-async function correctWindowsFilePaths(){
-  const outDir = path.resolve(wd, `./dist`); 
-  const pattern = path.join(outDir, '**/*.css');
+async function correctWindowsFilePaths() {
+  const outDir = path.resolve(wd, `./dist`);
+  const pattern = path.join(outDir, "**/*.css");
   const files = glob.sync(pattern);
-  for (let i=0; i< files.length; i ++){
+  for (let i = 0; i < files.length; i++) {
     const file = files[i];
-    const contents =  fs.readFileSync(file, "utf-8"); 
-    const newContents = contents.replace(/\\/g, '/');
+    const contents = fs.readFileSync(file, "utf-8");
+    const newContents = contents.replace(/\\/g, "/");
     await fs.writeFileSync(file, newContents);
   }
 }
@@ -96,7 +96,10 @@ function regen(msg, filepath) {
 }
 
 function runWatcher(bundler) {
-  const watcher = watch([`${wd}/src/*/img/*.{png,gif,jpg,svg}`]);
+  const watchPath = path
+    .resolve(wd, `./src/*/img/*.{png,gif,jpg,svg}`)
+    .replace(/\\/g, "/");
+  const watcher = watch([watchPath]);
   watcher.on("add", (file) => {
     if (file.indexOf("sprite-") === -1) {
       regen("image added", file);
@@ -121,7 +124,10 @@ function runWatcher(bundler) {
     reloadBrowsers(bundler);
   });
 
-  const spriteWatcher = watch([`${wd}/src/*/sprite/*.{png,gif,jpg}`]);
+  const spriteWatchPath = path
+    .resolve(wd, `./src/*/sprite/*.{png,gif,jpg}`)
+    .replace(/\\/g, "/");
+  const spriteWatcher = watch([spriteWatchPath]);
   spriteWatcher.on("add", (filepath) => {
     regen("sprite image added", filepath);
   });
