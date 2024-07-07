@@ -10,7 +10,8 @@
   "bin": {
     "adsemble-dev": "./cli-dev.js",
     "adsemble-build": "./cli-build.js",
-    "adsemble-cleanup": "./cli-cleanup.js"
+    "adsemble-cleanup": "./cli-cleanup.js",
+    "adsemble-rename": "./cli-rename.js"
   },
   "repository": {
     "type": "git",
