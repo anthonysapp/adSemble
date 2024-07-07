@@ -2,6 +2,8 @@ const glob = require('glob');
 const path = require('path');
 const fs = require('fs');
 
+console.log('AdSemble Rename Utility');
+
 // Check if both arguments are provided
 if (process.argv.length !== 4) {
   console.error('Usage: adsemble-rename <oldFolderName> <newFolderName>');
@@ -11,6 +13,8 @@ if (process.argv.length !== 4) {
 // Get the arguments
 const oldFolderName = process.argv[2];
 const newFolderName = process.argv[3];
+
+console.log(`Renaming ${oldFolderName} to ${newFolderName}...`);
 
 const files = glob.sync('./*/', {
   ignore: ['./node_modules', `${process.cwd()}/node_modules`, './build'],
