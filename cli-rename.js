@@ -1,6 +1,7 @@
 const glob = require('glob');
 const path = require('path');
 const fs = require('fs');
+const chalk = require('chalk');
 
 const cwd = process.cwd();
 
