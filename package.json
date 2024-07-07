@@ -1,6 +1,6 @@
 {
   "name": "adsemble",
-  "version": "3.0.1",
+  "version": "3.1.0",
   "description": "adSemble - a banner production utility using Parcel",
   "main": "index.js",
   "scripts": {
