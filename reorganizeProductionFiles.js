@@ -11,6 +11,7 @@ module.exports = async () => {
     let dir = path.dirname(files[i]);
     let cssUrlMatches = file.match(/url\(.*?\)/gi);
     if (cssUrlMatches) {
+      cssUrlMatches = cssUrlMatches.filter((url) => url.indexOf('#') === -1);
       for (let j = 0; j < cssUrlMatches.length; j++) {
         let match = cssUrlMatches[j];
         let imageFileName = match.substr(4, match.length - 5);
